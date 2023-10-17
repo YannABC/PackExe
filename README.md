@@ -9,10 +9,11 @@
 使用方法：<br>
 1.安装[WinRAR](https://www.win-rar.com/start.html?&L=0) <br>
 2.添加C:\Program Files\WinRAR 到系统环境变量的Path中 <br>
-3.将pack_exe.bat下载，并放到你要打包的目录的同级目录中 <br>
-4.修改bat脚本中的software_name, dir_name, exe_name <br>
+3.将pack_exe.bat 和 Icon.ico下载，并放到你要打包的目录的同级目录中 <br>
+4.修改Icon.ico
+5.修改bat脚本中的software_name, dir_name, exe_name <br>
   software_name   你的包名字 <br>
   dir_name        你的游戏目录文件夹 <br>
   exe_name        你的游戏目录里的exe文件名 <br>
-5.双击bat脚本运行，就会生成单独的exe <br>
-6.Good Luck!
+6.双击bat脚本运行，就会生成单独的exe <br>
+7.Good Luck!
