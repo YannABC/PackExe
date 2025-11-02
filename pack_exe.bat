@@ -19,7 +19,7 @@ echo Overwrite=^1>>%config_file%
 echo Update=U>>%config_file%
 
 if exist "%software_name%.exe" del "%software_name%.exe"
-WinRAR.exe a -sfx -z"%config_file%" "./%software_name%.exe" ./%dir_name% -iicon"%cd%\%icon_name%"
+WinRAR.exe a -s -z"%config_file%" "./%software_name%.exe" ./%dir_name% -iicon"%cd%\%icon_name%"
 
 del "%config_file%" >nul
 
