@@ -10,7 +10,6 @@ set software_name=Escape
 set dir_name=Exe
 set exe_name=Client.exe
 set icon_name=Icon.ico
-set temp_icon=C:\Temp\%icon_name%
 set config_file=pack_exe_config
 
 echo Setup=%dir_name%/%exe_name%>%config_file%
@@ -19,8 +18,8 @@ echo Silent=^1>>%config_file%
 echo Overwrite=^1>>%config_file%
 echo Update=U>>%config_file%
 
-copy /Y "%~dp0%icon_name%" "%temp_icon%" >nul
-WinRAR.exe a -s -z"%config_file%" "./%software_name%.exe" ./%dir_name% -iicon "%temp_icon%"
+if exist "%software_name%.exe" del "%software_name%.exe"
+WinRAR.exe a -sfx -z"%config_file%" "./%software_name%.exe" ./%dir_name% -iicon"%cd%\%icon_name%"
 
-del %config_file%
+del "%config_file%" >nul
 
